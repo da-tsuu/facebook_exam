@@ -16,13 +16,61 @@
  */
 
 .container {
+  background-color: #E9EBEE;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
- }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: inline-block
 
-header {
+}
+
+.header {
   background-color: #4267B2;
+  color: white;
   width: 100%;
   height: 40px;
+}
+
+.user_post {
+  width: 50%;
+  border: thin solid #000000;
+  height: auto;
+}
+
+.user_name {
+  border: medium double #000000;
+}
+
+.user_image {
+  border: thin solid #000000;
+}
+
+.user_content {
+  border: thin solid #ccc;
+  padding: 15px;
+  height:80px;
+}
+
+body {
+  width: 100%;
+}
+
+.user_select {
+  border: thin solid #000000;
+}
+
+footer {
+  background-color: #4267B2;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0;
+  color: #ccc;
+  text-align: center;
+}
+
+.wrapper {
+  text-align: center;
 }

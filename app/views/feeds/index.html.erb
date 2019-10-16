@@ -1,26 +1,27 @@
-<p id="notice"><%= notice %></p>
+<p><%= notice %><p>
 
-<h1>Feeds</h1>
+<h1>投稿一覧</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
   <tbody>
+  <div class="user_post">
     <% @feeds.each do |feed| %>
-      <tr>
-        <td><%= image_tag feed.image.to_s %></td>
-        <td><%= feed.title %></td>
-        <td><%= feed.content %></td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
-      </tr>
+      <div class="user_name">
+        <%= feed.user.name %>
+      </div>
+      <div class= "user_content">
+        <%= feed.content %>
+      </div>
+      <div class="user_image">
+        <%= image_tag feed.image.to_s %>
+      </div>
+            <div class="user_select">
+        <%= link_to '詳細を見る', feed_path(feed) %>
+        <%= link_to '編集する', edit_feed_path(feed) %>
+        <%= link_to '削除する', feed, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>
+      </div>
     <% end %>
+  </div>
   </tbody>
 </table>
 

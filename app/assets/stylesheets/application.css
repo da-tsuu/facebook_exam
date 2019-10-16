@@ -35,7 +35,7 @@
 }
 
 .user_post {
-  width: 50%;
+  width: auto;
   border: thin solid #000000;
   height: auto;
 }
